@@ -10,15 +10,15 @@ export default () => {
         console.log(searchTerm);
         try
         {
-            // const resp = await yelp.get("/search", {
-            //     params: {
-            //         term: searchTerm,
-            //         limit: 30,
-            //         location: "california"
-            //     } 
-            // })
+            const resp = await yelp.get("/search", {
+                params: {
+                    term: searchTerm,
+                    limit: 30,
+                    location: "california"
+                } 
+            })
 
-            const resp = data
+            // const resp = data
             console.log(resp.businesses.length);
             setResults(resp.businesses);
 
