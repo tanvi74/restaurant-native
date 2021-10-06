@@ -3,7 +3,9 @@ import { View, Text } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
+
 import SearchScreen from './src/screens/SearchScreen';
+import ResultsShow from './src/screens/ResultsShow';
 
 const Stack = createNativeStackNavigator();
 
@@ -16,7 +18,7 @@ const App = () => {
           component={SearchScreen}
           options={{ title: 'Business Search' }}
         />
-        {/* <Stack.Screen name="Profile" component={ProfileScreen} /> */}
+        <Stack.Screen name="ResultsScreen" component={ResultsShow} options={{ title: 'Business Search' }}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
